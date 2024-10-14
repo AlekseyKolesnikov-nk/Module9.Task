@@ -45,10 +45,9 @@ namespace Module9.Task
 
             for (int i = 0; i < stringList.Count; i++)
             {
-                if (stringList[i] == "Иванов") goto Br;
+                if (stringList[i] == "Иванов") goto Br;                                                                          // Ищем Иванова, если нашли, выходим из цикла
             }
                 throw new Exception("Сортировка прервана. В списке нет Иванова. Проверьте, он точно есть в этой группе");        // Условие для пользовательского исключения - проверка на наличие фамилии "Иванов"
-
         Br:
             Console.WriteLine();
 
@@ -84,10 +83,7 @@ namespace Module9.Task
             int number = Convert.ToInt32(Console.ReadLine());
 
             if(number! == 1 && number! == 2) throw new FormatException();                                           // Условие для исключения - некорректный дип данных
-
             if(number! < 1 | number! > 2) throw new ArgumentOutOfRangeException();                                  // Условие для исключения - число вне диапазона
-
-            
 
             NumberEntered(number);
         }
@@ -97,5 +93,4 @@ namespace Module9.Task
             NumberEnteredEvent?.Invoke(number);
         }
     }
-
 }
